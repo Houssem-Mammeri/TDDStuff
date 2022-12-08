@@ -8,8 +8,10 @@ public class Loterie extends SortingByArray {
 	
 	public String boulesSorties() {
 		String res = "";
-		for (int i = 0; i < this.items.length; i++) {
-			if (itemFound(i))
+		SortedItemsIterator it=this.createIterator();
+		
+		while(it.hasNext()) {
+			int i=it.next();
 				if (res.equals(""))
 					res += i;
 				else

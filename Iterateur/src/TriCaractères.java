@@ -11,10 +11,13 @@ public class TriCaractères extends SortingByArray{
 		return occurencesLettresTriées();
 	}
 
+
+
 	private String occurencesLettresTriées() {
 		String res = "";
-		for (int i = 0; i < this.items.length; i++) {
-			if (itemFound(i))
+		SortedItemsIterator it=this.createIterator();
+		while(it.hasNext()) {
+			int i=it.next();
 				for (int j = 0; j < this.items[i]; j++)
 					res+= (char)('a' + i);
 		}

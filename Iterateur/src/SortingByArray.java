@@ -37,7 +37,10 @@ private int curseur=-1;
 		for (int i=curseur+1;i <items.length;i++)
 		{
 			if(itemFound(i))
-				 return i;}
+				 {curseur=i;
+				 return curseur;}
+			
+		}
 			
 			return -1;
 	}
