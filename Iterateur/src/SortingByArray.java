@@ -15,4 +15,37 @@ public class SortingByArray {
 		return this.items[valeur] > 0;
 	}
 
+
+public SortedItemsIterator createIterator()
+
+{
+return new SortedItems();
 }
+
+class SortedItems implements SortedItemsIterator {
+private int curseur=-1;
+	@Override
+	public boolean hasNext() {
+		for (int i=curseur+1;i <items.length;i++)
+		{
+			if(itemFound(i))
+				 return true;}
+			
+			return false;}
+	@Override
+	public int next() {
+		for (int i=curseur+1;i <items.length;i++)
+		{
+			if(itemFound(i))
+				 return i;}
+			
+			return -1;
+	}
+		
+}}
+
+
+	
+	
+	
+
