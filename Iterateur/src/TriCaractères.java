@@ -18,7 +18,7 @@ public class TriCaractères extends SortingByArray{
 		SortedItemsIterator it=this.createIterator();
 		while(it.hasNext()) {
 			int i=it.next();
-				for (int j = 0; j < this.items[i]; j++)
+				for (int j = 0; j < this.numberOccurencies(i); j++)
 					res+= (char)('a' + i);
 		}
 		return res;
