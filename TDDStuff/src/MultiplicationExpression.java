@@ -1,19 +1,25 @@
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-public class AdditionExpression extends ArithmeticExpression{
+public class MultiplicationExpression extends ArithmeticExpression{
 
-    public AdditionExpression() {
+    public MultiplicationExpression() {
         super();
     }
+
+
+
+
+
+
+
     public int evaluate() {
         Iterator<Evaluable> it=createIterator();
-        int sum=0;
+        int sum=1;
         while(it.hasNext())
         {
-            sum=sum+it.next().evaluate();
+            sum=sum*it.next().evaluate();
         }
         return sum;
     }

@@ -1,4 +1,4 @@
-public class IntegerValue {
+public class IntegerValue implements Evaluable{
 public int val;
 
     public IntegerValue(int n ) {
